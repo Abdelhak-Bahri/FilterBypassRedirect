@@ -1,0 +1,38 @@
+{
+    "name" : "FilterBypassRedirect",
+    "version" : "1.0.0.0",
+    "author" : "Abdelhak-Bahri",
+    "browser_action" : 
+    {
+        "default_icon" : 
+        {
+            "20" : "icons/icon_20.png",
+            "40" : "icons/icon_40.png"
+        },
+        "default_title" : "FilterBypassRedirect",
+        "default_popup" : "index.html"
+    },
+    "content_scripts" : [{
+            "js" : ["js/index.js"],
+            "matches" : ["*://*/*"]
+        }
+    ],
+
+    "content_security_policy" : "script-src 'self'; object-src 'self'",
+    "default_locale" : "en",
+    "description" : "This is a sample extension that redirect a url to filterbypass web proxy",
+
+    "permissions" : 
+    [
+        "*://*/*", "notifications", "activeTab", "tabs", "contextMenus", "background","webNavigation"
+    ],
+    "icons" : {
+        "128" : "icons/icon_128.png",
+        "16" : "icons/icon_16.png",
+        "48" : "icons/icon_48.png"
+    },
+    "minimum_edge_version" : "33.14281.1000.0",
+
+    "web_accessible_resources" : ["icons/icon_48.png"]
+
+} 
